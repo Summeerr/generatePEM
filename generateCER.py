@@ -8,7 +8,7 @@ def file_extension(path):
 parser  = argparse.ArgumentParser(description='to create pem file')
 parser.add_argument('-dev', type=str, default = None)
 parser.add_argument('-dis', type=str, default = None)
-parser.add_argument('-val', type=str ,default = 'true')
+parser.add_argument('-val', type=str ,default = 'false')
 args   = parser.parse_args()
 print args.dev
 print args.dis
