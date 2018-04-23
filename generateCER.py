@@ -42,7 +42,7 @@ if(file_extension(disArr[0]) == '.cer'):
 else:
     os.system("openssl x509 -in "+ disArr[1]+" -inform der -out " + ('push_dis_cer.pem'))
     os.system('openssl pkcs12 -nocerts -out ' + 'push_key_dis.pem' +' -in '+disArr[0])
-os.system("cat push_key_dis.pem push_key_dis.pem > push_dis123.pem")
+os.system("cat push_dis_cer.pem push_key_dis.pem > push_dis123.pem")
 #是否需要验证，默认需要。
 if val == 'true':
     #验证dev和dis证书有效性，一般不会出问题
